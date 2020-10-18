@@ -1,0 +1,23 @@
+import Collin_base_code
+
+
+
+class Race_Car (Collin_base_code.Car): #1st thing to do is tell Python that Car is the parent
+    def __init__(self): #3 modify child' init function (sometimes)
+        Collin_base_code.Car.__init__(self)#2d thing to do is grab parent's init func
+        self.attribute=...
+
+    def trick(self):
+        print("I am a car that can jump")
+
+class Taxi (Collin_base_code.Car):#Taxi will inherit
+    def __init__(self):
+        Collin_base_code.Car.__init__(self)  # 2d thing to do is grab parent's init func
+        self.attribute=None
+
+    def pick_up_passenger(self):
+        print("I can pick up passengers b/c I have four doors")
+
+car1=Race_Car()
+car1.drive(); car1.trick()
+
